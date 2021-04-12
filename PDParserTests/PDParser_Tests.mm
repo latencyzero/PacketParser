@@ -43,7 +43,7 @@
 #import "PDTreeNode.h"
 #import "XParse.h"
 
-@interface PDParser_Tests : XCTest
+@interface PDParser_Tests : XCTestCase
 
 @property (nonatomic, strong, readonly)		NSManagedObjectContext*			managedObjectContext;
 @property (nonatomic, strong, readonly)		NSManagedObjectModel*			managedObjectModel;
@@ -104,8 +104,10 @@ tearDown
 }
 
 - (void)
-DtestLexer
+testLexer
 {
+	NSLog(@"foo");
+	
 	NSString* p =
 	  @"packet Foo\n"
 	  @"{\n"

@@ -22,7 +22,6 @@
 		C68648E22624343300035B75 /* libcurses.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C68648DD26242EB800035B75 /* libcurses.tbd */; };
 		C68648E42624343A00035B75 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C68648D926242D5A00035B75 /* libz.tbd */; };
 		C68648E72624345C00035B75 /* libLLVMBitReader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C68648D526242D1B00035B75 /* libLLVMBitReader.a */; };
-		C68648F2262435CD00035B75 /* PacketParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C68648F1262435CD00035B75 /* PacketParserTests.m */; };
 		C6B4046E16A188B700F132AF /* PDLexer.mm in Sources */ = {isa = PBXBuildFile; fileRef = C6B4046C16A188B700F132AF /* PDLexer.mm */; };
 		C6B4047316A18AEB00F132AF /* PDToken.mm in Sources */ = {isa = PBXBuildFile; fileRef = C6B4047216A18AEB00F132AF /* PDToken.mm */; };
 		C6B4047816A1A78900F132AF /* PDTreeNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = C6B4047716A1A78900F132AF /* PDTreeNode.mm */; };
@@ -155,16 +154,6 @@
 		C6FB742916ABA3EF000C563C /* LZIRBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C6FB742616ABA3EF000C563C /* LZIRBuilder.cpp */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		C68648F4262435CD00035B75 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C6BBEB46168FBADF007D56B3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C6BBEB4E168FBADF007D56B3;
-			remoteInfo = PacketParser;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		C65EA0C916993EF300F1B4FC /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -196,9 +185,6 @@
 		C68648D526242D1B00035B75 /* libLLVMBitReader.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLLVMBitReader.a; path = ../../../../../../usr/local/Cellar/llvm/HEAD/lib/libLLVMBitReader.a; sourceTree = "<group>"; };
 		C68648D926242D5A00035B75 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		C68648DD26242EB800035B75 /* libcurses.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcurses.tbd; path = usr/lib/libcurses.tbd; sourceTree = SDKROOT; };
-		C68648EF262435CD00035B75 /* PacketParserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PacketParserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C68648F1262435CD00035B75 /* PacketParserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PacketParserTests.m; sourceTree = "<group>"; };
-		C68648F3262435CD00035B75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6B4046C16A188B700F132AF /* PDLexer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PDLexer.mm; sourceTree = "<group>"; };
 		C6B4046D16A188B700F132AF /* PDLexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDLexer.h; sourceTree = "<group>"; };
 		C6B4047016A18ACC00F132AF /* PDToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDToken.h; sourceTree = "<group>"; };
@@ -360,13 +346,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C68648EC262435CD00035B75 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C6B4048416A399ED00F132AF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -428,15 +407,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C68648F0262435CD00035B75 /* PacketParserTests */ = {
-			isa = PBXGroup;
-			children = (
-				C68648F1262435CD00035B75 /* PacketParserTests.m */,
-				C68648F3262435CD00035B75 /* Info.plist */,
-			);
-			path = PacketParserTests;
-			sourceTree = "<group>";
-		};
 		C6B4046B16A1889200F132AF /* PDParser */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,7 +462,6 @@
 				C6BBEBA5169044A2007D56B3 /* lib */,
 				C6BBEB59168FBADF007D56B3 /* PacketParser */,
 				C6B4048B16A399ED00F132AF /* PDParserTests */,
-				C68648F0262435CD00035B75 /* PacketParserTests */,
 				C6BBEB52168FBADF007D56B3 /* Frameworks */,
 				C6BBEB50168FBADF007D56B3 /* Products */,
 			);
@@ -503,7 +472,6 @@
 			children = (
 				C6BBEB4F168FBADF007D56B3 /* PacketParser.app */,
 				C6B4048816A399ED00F132AF /* PDParserTests.xctest */,
-				C68648EF262435CD00035B75 /* PacketParserTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -808,24 +776,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C68648EE262435CD00035B75 /* PacketParserTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C68648F6262435CD00035B75 /* Build configuration list for PBXNativeTarget "PacketParserTests" */;
-			buildPhases = (
-				C68648EB262435CD00035B75 /* Sources */,
-				C68648EC262435CD00035B75 /* Frameworks */,
-				C68648ED262435CD00035B75 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C68648F5262435CD00035B75 /* PBXTargetDependency */,
-			);
-			name = PacketParserTests;
-			productName = PacketParserTests;
-			productReference = C68648EF262435CD00035B75 /* PacketParserTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		C6B4048716A399ED00F132AF /* PDParserTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C6B4049516A399ED00F132AF /* Build configuration list for PBXNativeTarget "PDParserTests" */;
@@ -870,14 +820,6 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Latency: Zero";
-				TargetAttributes = {
-					C68648EE262435CD00035B75 = {
-						CreatedOnToolsVersion = 12.4;
-						DevelopmentTeam = H6F2W964VK;
-						ProvisioningStyle = Automatic;
-						TestTargetID = C6BBEB4E168FBADF007D56B3;
-					};
-				};
 			};
 			buildConfigurationList = C6BBEB49168FBADF007D56B3 /* Build configuration list for PBXProject "PacketParser" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -894,19 +836,11 @@
 			targets = (
 				C6BBEB4E168FBADF007D56B3 /* PacketParser */,
 				C6B4048716A399ED00F132AF /* PDParserTests */,
-				C68648EE262435CD00035B75 /* PacketParserTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C68648ED262435CD00035B75 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C6B4048516A399ED00F132AF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -963,14 +897,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C68648EB262435CD00035B75 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C68648F2262435CD00035B75 /* PacketParserTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C6B4048316A399ED00F132AF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1066,14 +992,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		C68648F5262435CD00035B75 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C6BBEB4E168FBADF007D56B3 /* PacketParser */;
-			targetProxy = C68648F4262435CD00035B75 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
 		C6B4048E16A399ED00F132AF /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -1118,114 +1036,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		C68648F7262435CD00035B75 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = H6F2W964VK;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = PacketParserTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 11.1;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.latencyzero.PacketParserTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PacketParser.app/Contents/MacOS/PacketParser";
-			};
-			name = Debug;
-		};
-		C68648F8262435CD00035B75 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = H6F2W964VK;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = PacketParserTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 11.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.latencyzero.PacketParserTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PacketParser.app/Contents/MacOS/PacketParser";
-			};
-			name = Release;
-		};
 		C6B4049616A399ED00F132AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1363,15 +1173,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C68648F6262435CD00035B75 /* Build configuration list for PBXNativeTarget "PacketParserTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C68648F7262435CD00035B75 /* Debug */,
-				C68648F8262435CD00035B75 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		C6B4049516A399ED00F132AF /* Build configuration list for PBXNativeTarget "PDParserTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
