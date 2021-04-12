@@ -1,0 +1,20 @@
+//
+// Prefix header for all source files of the 'PacketParser' target in the 'PacketParser' project
+//
+
+#define ARC_ENABLED __has_feature(objc_arc)
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+	#import <CoreData/CoreData.h>
+#endif
+
+#ifdef __cplusplus
+
+#import "llvm/Module.h"
+#import "llvm/ExecutionEngine/ExecutionEngine.h"
+#import "llvm/ExecutionEngine/GenericValue.h"
+#import "llvm/ExecutionEngine/JIT.h"
+#import "llvm/Support/TargetSelect.h"
+
+#endif

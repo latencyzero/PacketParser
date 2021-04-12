@@ -1,0 +1,10 @@
+//
+// Prefix header for all source files of the 'PDParser Tests' target in the 'PDParser Tests' project
+//
+
+#define ARC_ENABLED __has_feature(objc_arc)
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+	#import <CoreData/CoreData.h>
+#endif
