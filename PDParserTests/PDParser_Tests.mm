@@ -6,16 +6,17 @@
 //  Copyright (c) 2013 Latency: Zero. All rights reserved.
 //
 
-#import "PDParser_Tests.h"
+#import <XCTest/XCTest.h>
 
+#import <sstream>
 
 //
 //	Library Imports
 //
 
-#import "llvm/LLVMContext.h"
-#import "llvm/Module.h"
-#import "llvm/Analysis/Verifier.h"
+#import "llvm/IR/LLVMContext.h"
+#import "llvm/IR/Module.h"
+#import "llvm/IR/Verifier.h"
 #import "llvm/ExecutionEngine/GenericValue.h"
 #import "llvm/ExecutionEngine/ExecutionEngine.h"
 #import "llvm/ExecutionEngine/JIT.h"
@@ -23,6 +24,7 @@
 //#import "llvm/Support/IRReader.h"
 //#import "llvm/Support/MemoryBuffer.h"
 #import "llvm/Support/TargetSelect.h"
+#include "llvm/Support/raw_ostream.h"
 
 #import "Debug.h"
 
@@ -41,8 +43,7 @@
 #import "PDTreeNode.h"
 #import "XParse.h"
 
-
-@interface PDParser_Tests()
+@interface PDParser_Tests : XCTest
 
 @property (nonatomic, strong, readonly)		NSManagedObjectContext*			managedObjectContext;
 @property (nonatomic, strong, readonly)		NSManagedObjectModel*			managedObjectModel;
@@ -164,7 +165,7 @@ DtestParsePacket
 	catch (XParse& e)
 	{
 		NSLog(@"Exception parsing: %@", e.msg());
-		STFail(@"Exception parsing");
+		XCTFail(@"Exception parsing");
 	}
 }
 
@@ -198,7 +199,7 @@ DtestParseFail
 	
 	if (!gotException)
 	{
-		STFail(@"Failed to get expected exception");
+		XCTFail(@"Failed to get expected exception");
 	}
 }
 
@@ -241,7 +242,7 @@ DtestParsePacketAndExecute
 	catch (XParse& e)
 	{
 		NSLog(@"Exception parsing: %@", e.msg());
-		STFail(@"Exception parsing");
+		XCTFail(@"Exception parsing");
 	}
 	
 	//	Execute the generated code…
@@ -267,7 +268,7 @@ DtestParsePacketAndExecute
 	
 	if (!testComplete)
 	{
-		STFail(@"Test timed out");
+		XCTFail(@"Test timed out");
 	}
 }
 
@@ -310,10 +311,11 @@ testTwoPass
 		declarationPass.walk(root);
 		
 		NSLogDebug(@"Verifying declarations --------------------------------------------------------");
-		std::string verificationMsg;
-		if (llvm::verifyModule(*module, llvm::ReturnStatusAction, &verificationMsg))
+		std::string msg;
+		llvm::raw_string_ostream oss(msg);
+		if (llvm::verifyModule(*module, &oss))
 		{
-			NSLogDebug("Verification issues: %s", verificationMsg.c_str());
+			NSLogDebug("Verification issues: %s", msg.c_str());
 		}
 		
 		NSLogDebug(@"Symbol table dump -------------------------------------------------------------");
@@ -323,9 +325,9 @@ testTwoPass
 		codeGen.walk(root);
 		
 		NSLogDebug(@"Verifying code gen ------------------------------------------------------------");
-		if (llvm::verifyModule(*module, llvm::ReturnStatusAction, &verificationMsg))
+		if (llvm::verifyModule(*module, &oss))
 		{
-			NSLogDebug("Verification issues: %s", verificationMsg.c_str());
+			NSLogDebug("Verification issues: %s", msg.c_str());
 		}
 		
 		NSLogDebug(@"Module dump: ------------------------------------------------------------------");
@@ -366,7 +368,7 @@ testTwoPass
 		
 		if (!testComplete)
 		{
-			STFail(@"Test timed out");
+			XCTFail(@"Test timed out");
 		}
 		NSLogDebug(@"Completed ---------------------------------------------------------------------");
 	}
@@ -374,7 +376,7 @@ testTwoPass
 	catch (XParse& e)
 	{
 		module->dump();
-		STFail(@"Exception parsing: %@", e.msg());
+		XCTFail(@"Exception parsing: %@", e.msg());
 	}
 }
 
