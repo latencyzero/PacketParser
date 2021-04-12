@@ -13,7 +13,7 @@
 //	Library Imports
 //
 
-#import "llvm/Module.h"
+#import "llvm/IR/Module.h"
 #import "llvm/ExecutionEngine/ExecutionEngine.h"
 #import "llvm/ExecutionEngine/GenericValue.h"
 #import "llvm/ExecutionEngine/JIT.h"

@@ -15,8 +15,8 @@
 //	Library Imports
 //
 
-#import "llvm/IRBuilder.h"
-#import "llvm/Module.h"
+#import "llvm/IR/IRBuilder.h"
+#import "llvm/IR/Module.h"
 
 #import "Debug.h"
 

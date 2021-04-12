@@ -8,7 +8,7 @@
 #ifndef __LZIRBuilder_h__
 #define __LZIRBuilder_h__
 
-#include "llvm/IRBuilder.h"
+#include "llvm/IR/IRBuilder.h"
 
 
 

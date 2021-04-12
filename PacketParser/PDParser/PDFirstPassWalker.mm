@@ -12,9 +12,9 @@
 //	Library Imports
 //
 
-#import "llvm/Constants.h"
-#import "llvm/Module.h"
-#import "llvm/Analysis/Verifier.h"
+#import "llvm/IR/Constants.h"
+#import "llvm/IR/Module.h"
+#import "llvm/IR/Verifier.h"
 
 #import "LZUtils.h"
 

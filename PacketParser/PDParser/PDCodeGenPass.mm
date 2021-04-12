@@ -12,11 +12,11 @@
 //	Library Imports
 //
 
-#import "llvm/Constants.h"
-#import "llvm/DataLayout.h"
-#import "llvm/IRBuilder.h"
-#import "llvm/Module.h"
-#import "llvm/Analysis/Verifier.h"
+#import "llvm/IR/Constants.h"
+#import "llvm/IR/DataLayout.h"
+#import "llvm/IR/IRBuilder.h"
+#import "llvm/IR/Module.h"
+#import "llvm/IR/Verifier.h"
 #import "llvm/Support/raw_ostream.h"
 
 #import "Debug.h"
